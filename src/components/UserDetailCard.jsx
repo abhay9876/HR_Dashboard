@@ -11,17 +11,17 @@ function UserDetailCard() {
             .then(res => res.json())
             .then(data => setUser(data))
     }, [id])
-    if (!user) return <p>Loading....................</p>
+    if (!user) return <p>User Not Found !</p>
     return (
         <>
-            <div className="card bg-white min-w-80 shadow-xl m-10">
+            <div className="card bg-base-300 min-w-80 shadow-xl m-10">
                 
-                <div className="p-6 max-w-3xl mx-auto bg-white rounded-xl shadow space-y-3">
+                <div className="p-6 max-w-3xl mx-auto bg-base-100 text-base-content rounded-xl shadow space-y-3">
                     <div className="flex items-center space-x-4">
                         <img src={user.image} alt={user.firstName} className="w-24 h-24 rounded-full border" />
                         <div>
                             <h2 className="text-2xl font-bold">{user.firstName} {user.lastName}</h2>
-                            <p className="text-gray-500">Username: {user.username}</p>
+                            <p className="text-base-content">Username: {user.username}</p>
                             
                         </div>
                     </div>

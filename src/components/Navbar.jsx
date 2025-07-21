@@ -2,7 +2,7 @@ import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
     return (
-        <div className="navbar bg-white text-black shadow-xl ">
+        <div className="navbar bg-base-100  text-base-content shadow-xl ">
             <div className="flex-1 p-4 ">
                 <h1 ><strong>Admin Dashboard</strong></h1>
             </div>

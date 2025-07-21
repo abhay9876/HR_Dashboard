@@ -5,7 +5,7 @@ function UserCards({ user }) {
   const isBookmarked = bookmarks.some((u) => u.id === user.id);
     return (
         <>
-            <div className="card card-side bg-white text-black shadow-xl">
+            <div className="card card-side bg-base-100 text-base-content shadow-xl">
                 <figure>
                     <img
                         src={user.image}

@@ -13,8 +13,8 @@ export default function Analytics() {
   };
 
   return (
-    <div className="p-6 space-y-6">
-      <h1 className="text-xl font-bold text-gray-800">Analytics Overview</h1>
+    <div className="p-6 space-y-6 bg-base-100">
+      <h1 className="text-xl font-bold text-base-content">Analytics Overview</h1>
 
       
       <div className="bg-white p-4 rounded-md shadow-md max-w-2xl mx-auto">

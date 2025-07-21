@@ -33,7 +33,7 @@ export default function Home() {
     return (
 
 
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen bg-base-300">
 
 
             <div className="flex flex-col md:flex-row p-4 gap-4">
@@ -72,14 +72,14 @@ export default function Home() {
                 </div>
 
 
-                <div className="w-full md:w-2/3">
-                    <div className="bg-white p-4 rounded-xl shadow-md">
+                <div className="w-full md:w-2/3 text-base-content">
+                    <div className="bg-base-100 p-4 rounded-xl shadow-md">
                         <Bookmark />
 
 
                     </div>
 
-                    <div className="bg-white p-4 rounded-xl shadow-xl m-4 ">
+                    <div className="bg-base-100 p-4 rounded-xl shadow-xl m-4 ">
                         <h1 className='text-2xl font-bold mb-4'>Analytical Graph</h1>
                         <p>Quickly spot top performers and team trends --- all in one simple view</p>
                         <Link to="/analytics">
