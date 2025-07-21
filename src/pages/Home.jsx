@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import UserCard from '../components/userCards';
 import Bookmark from '../components/BookMark';
 import { Link } from 'react-router-dom';
+import Sidebar from '../components/Sidebar'
 
 export default function Home() {
     const [users, setUsers] = useState([]);
@@ -37,39 +37,12 @@ export default function Home() {
 
 
             <div className="flex flex-col md:flex-row p-4 gap-4">
+                  <div className="h-screen overflow-y-auto bg-base-100 p-4 rounded-xl shadow-md">
+                  <Sidebar />
+                  </div>
+                  
 
-
-                <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                    <input
-                        type='text'
-                        placeholder='Search by name or email...'
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="input input-bordered  bg-white shadow-xl w-full max-w-md mb-6"
-                    />
-                    <select value={department} onChange={(e) => setDepartment(e.target.value)} className="select bg-white shadow-xl select-bordered">
-                        <option value="">All Departments</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Sales">Sales</option>
-                        <option value="Engineering">Engineering</option>
-                        <option value="Human Resources">Human Resources</option>
-                    </select>
-                    <select value={rating} onChange={(e) => setRating(e.target.value)} className="select  bg-white shadow-xl select-bordered">
-                        <option value="">All Ratings</option>
-                        <option value="1">1 Star</option>
-                        <option value="2">2 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="5">5 Stars</option>
-                    </select>
-                    {filterUser.length > 0 ? (
-                        filterUser.map((user) =>
-                            <UserCard key={user.id} user={user} />
-                        )
-                    ) : (
-                        <p>Sorry ..... Not Found !!!</p>
-                    )}
-                </div>
+              
 
 
                 <div className="w-full md:w-2/3 text-base-content">
